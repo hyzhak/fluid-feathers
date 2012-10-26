@@ -1,7 +1,7 @@
 Fluid feathers
 ==============
 
-Fluent interfaces for declarative description of GUI in FeathersUI also in Starling framework.
+Skatch-up of fluent interfaces for declarative description of GUI in FeathersUI also Starling framework.
 Inspired by Sibirjak DataProvider Controls Examples [https://github.com/kakenbok/ActionScript-DataProvider-Controls]
 
 
@@ -54,36 +54,36 @@ var container : DisplayObject = b.vGroup()
 
 ```actionscript
 
-//Before
+//Before -----------------------------------------------------
 
 _button = new Button();
 _button.label = "Click Me";
 _button.addEventListener(Event.TRIGGERED, button_triggeredHandler);
+_button.x = 200;
+_button.y = 200;
 addChild(_button);
-_button.validate();
-_button.x = (stage.stageWidth - _button.width) / 2;
-_button.y = (stage.stageHeight - _button.height) / 2;
 
 var label:Label = new Label();
 label.text = "Hello World!";
 label.x = 50;
-label.y = 50;
+label.y = 200;
 addChild(label);
 
-//After
+//After -----------------------------------------------------
+
 var b : UIBuilder = getUIBuilder();
 
 _button = b.button()
 			.label("Click Me")
-			.x(stage.stageWidth / 2)
-			.y(stage.stageHeight / 2)
 			.onTriggered(button_triggeredHandler)
+			.x(200)
+			.y(200)
 			.buildAndAddTo(this) as Button;
 
 b.label()
 	.text("Hello World!")
 	.x(50)
-	.y(50)
+	.y(200)
 	.buildAndAddTo(this);
 
 ```
@@ -92,7 +92,7 @@ b.label()
 
 ```actionscript
 
-//Before
+//Before -----------------------------------------------------
 
 var buttonA:Button = new Button();
 buttonA.label = "Click Me A";
@@ -128,7 +128,8 @@ _list.y = 0;
 _list.width = stage.stageWidth;
 _list.height = stage.stageHeight;
 
-//After
+//After -----------------------------------------------------
+
 var b : UIBuilder = getUIBuilder();
 _list = b.list()
 			.dataProvider(new ListCollection([

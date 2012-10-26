@@ -3,12 +3,13 @@ fluid-feathers
 
 Fluid interface for declarative description of GUI in FeathersUI also in Starling framework
 
+
 Examples
 ========
 
 ## Button and Label
 
-'''ActionScript
+```actionscript
 
 //Before
 
@@ -41,4 +42,4 @@ b.newLabel()
 	.y(50)
 	.buildAndAddTo(this);
 
-'''
+```

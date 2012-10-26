@@ -12,25 +12,25 @@ package org.hyzhak.fluid.feathers
 		private var _listBuilder:FeatherListBuilder = new FeatherListBuilder();
 		private var _pickerListBuilder:FeatherPickerListBuilder = new FeatherPickerListBuilder();
 		
-		public function newButton():FeatherButtonBuilder
+		public function button():FeatherButtonBuilder
 		{
 			_buttonBuilder.instance = new Button();
 			return _buttonBuilder;
 		}
 		
-		public function newLabel():FeatherLabelBuilder
+		public function label():FeatherLabelBuilder
 		{
 			_labelBuilder.instance = new Label();
 			return _labelBuilder;
 		}
 		
-		public function newList():FeatherListBuilder
+		public function list():FeatherListBuilder
 		{
 			_listBuilder.instance = new List();
 			return _listBuilder;
 		}
 		
-		public function newPickerList():FeatherPickerListBuilder
+		public function pickerList():FeatherPickerListBuilder
 		{
 			_pickerListBuilder.instance = new PickerList();
 			return _pickerListBuilder;

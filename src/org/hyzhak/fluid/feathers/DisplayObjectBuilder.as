@@ -25,10 +25,27 @@ package org.hyzhak.fluid.feathers
 			return this;
 		}
 		
+		final public function width(value : Number) : DisplayObjectBuilder
+		{
+			_instance.width = value;
+			return this;
+		}
+		
+		final public function height(value : Number) : DisplayObjectBuilder
+		{
+			_instance.height = value;
+			return this;
+		}
+		
 		final public function onTriggered(handler : Function) : DisplayObjectBuilder
 		{
 			_instance.addEventListener(Event.TRIGGERED, handler);
 			return this;
+		}
+		
+		final public function build() : DisplayObject
+		{
+			return _instance;
 		}
 		
 		final public function buildAndAddTo(parent : DisplayObjectContainer) : DisplayObject

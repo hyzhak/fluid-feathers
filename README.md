@@ -1,13 +1,14 @@
-fluid-feathers
+Fluid feathers
 ==============
 
-Fluid interface for declarative description of GUI in FeathersUI also in Starling framework
+Fluent interfaces for declarative description of GUI in FeathersUI also in Starling framework.
+Inspired by Sibirjak DataProvider Controls Examples [https://github.com/kakenbok/ActionScript-DataProvider-Controls]
 
 
 Examples
 ========
 
-## From
+## Form
 
 ![HelloWorld Form](http://i.imgur.com/BxTQx.png)
 

@@ -7,6 +7,48 @@ Fluid interface for declarative description of GUI in FeathersUI also in Starlin
 Examples
 ========
 
+## From
+
+![HelloWorld Form](http://i.imgur.com/BxTQx.png)
+
+```actionscript
+var b : UIBuilder = getUIBuilder();
+
+var container : DisplayObject = b.vGroup()
+	.gap(16)
+	.contain(
+		b.label()
+			.text("Hello World!")
+			.build(),
+		b.hGroup()
+			.contain(
+				b.label()
+					.text("Long Blah-Blah-Blah\nBlah-Blah-Blah\nBlah-Blah-Blah\nBlah-Blah-Blah!")
+					.build()
+			).build(),
+		b.hGroup()
+			.gap(4)
+			.contain(
+				b.button()
+					.label("Help")
+					.onTriggered(onButtonTriggered)
+					.build(),
+				b.button()
+					.label("Ok")
+					.onTriggered(onButtonTriggered)
+					.build(),
+				b.button()
+					.label("Cancel")
+					.onTriggered(onButtonTriggered)
+					.build()
+			).build()
+	)
+	.x(20).y(20)
+	.width(stage.stageWidth)
+	.height(stage.stageHeight)
+	.buildAndAddTo(this);
+```
+
 ## Button and Label
 
 ```actionscript

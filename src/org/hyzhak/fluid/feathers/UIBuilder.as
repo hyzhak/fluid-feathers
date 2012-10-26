@@ -6,5 +6,8 @@ package org.hyzhak.fluid.feathers
 		function label() : FeatherLabelBuilder;
 		function pickerList() : FeatherPickerListBuilder;
 		function list() : FeatherListBuilder;
+		
+		function vGroup() : VGroupBuilder;
+		function hGroup() : HGroupBuilder;
 	}
 }

@@ -5,6 +5,12 @@ package org.hyzhak.fluid.feathers
 
 	public class FeatherListBuilder extends DisplayObjectBuilder
 	{
+		final internal function initNewInstance() : FeatherListBuilder
+		{
+			_instance = new List();
+			return this;
+		}
+		
 		public function dataProvider(value : ListCollection) : FeatherListBuilder
 		{
 			(_instance as List).dataProvider = value;

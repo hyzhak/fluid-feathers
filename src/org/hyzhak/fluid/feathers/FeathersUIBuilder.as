@@ -1,9 +1,6 @@
 package org.hyzhak.fluid.feathers
 {
-	import feathers.controls.Button;
-	import feathers.controls.Label;
-	import feathers.controls.List;
-	import feathers.controls.PickerList;
+	
 
 	public class FeathersUIBuilder implements UIBuilder
 	{
@@ -11,29 +8,37 @@ package org.hyzhak.fluid.feathers
 		private var _labelBuilder:FeatherLabelBuilder = new FeatherLabelBuilder();
 		private var _listBuilder:FeatherListBuilder = new FeatherListBuilder();
 		private var _pickerListBuilder:FeatherPickerListBuilder = new FeatherPickerListBuilder();
+		private var _hGroupBuilder:HGroupBuilder = new HGroupBuilder();
+		private var _vGroupBuilder:VGroupBuilder = new VGroupBuilder();
 		
 		public function button():FeatherButtonBuilder
 		{
-			_buttonBuilder.instance = new Button();
-			return _buttonBuilder;
+			return _buttonBuilder.initNewInstance();
 		}
 		
 		public function label():FeatherLabelBuilder
 		{
-			_labelBuilder.instance = new Label();
-			return _labelBuilder;
+			return _labelBuilder.initNewInstance();
 		}
 		
 		public function list():FeatherListBuilder
 		{
-			_listBuilder.instance = new List();
-			return _listBuilder;
+			return _listBuilder.initNewInstance();
 		}
 		
 		public function pickerList():FeatherPickerListBuilder
 		{
-			_pickerListBuilder.instance = new PickerList();
-			return _pickerListBuilder;
+			return _pickerListBuilder.initNewInstance();
+		}
+		
+		public function hGroup():HGroupBuilder
+		{
+			return _hGroupBuilder.initNewInstance();
+		}
+		
+		public function vGroup():VGroupBuilder
+		{
+			return _vGroupBuilder.initNewInstance();
 		}
 		
 		

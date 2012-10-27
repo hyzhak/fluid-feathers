@@ -1,5 +1,6 @@
 package org.hyzhak.fluid.feathers
 {
+	import feathers.controls.Slider;
 	
 
 	public class FeathersUIBuilder implements UIBuilder
@@ -10,6 +11,7 @@ package org.hyzhak.fluid.feathers
 		private var _pickerListBuilder:FeatherPickerListBuilder = new FeatherPickerListBuilder();
 		private var _hGroupBuilder:HGroupBuilder = new HGroupBuilder();
 		private var _vGroupBuilder:VGroupBuilder = new VGroupBuilder();
+		private var _sliderBuilder:FeatherSliderBuilder = new FeatherSliderBuilder();
 		
 		public function button():FeatherButtonBuilder
 		{
@@ -39,6 +41,11 @@ package org.hyzhak.fluid.feathers
 		public function vGroup():VGroupBuilder
 		{
 			return _vGroupBuilder.initNewInstance();
+		}
+		
+		public function slider():FeatherSliderBuilder
+		{
+			return _sliderBuilder.initNewInstance();
 		}
 		
 		

@@ -4,6 +4,8 @@ package org.hyzhak.fluid.feathers
 	{
 		function button() : FeatherButtonBuilder;
 		function label() : FeatherLabelBuilder;
+		function slider() : FeatherSliderBuilder;
+			
 		function pickerList() : FeatherPickerListBuilder;
 		function list() : FeatherListBuilder;
 		

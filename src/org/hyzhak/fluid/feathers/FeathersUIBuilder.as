@@ -2,6 +2,8 @@ package org.hyzhak.fluid.feathers
 {
 	import feathers.controls.Slider;
 	
+	import starling.textures.Texture;
+	
 
 	public class FeathersUIBuilder implements UIBuilder
 	{
@@ -12,6 +14,7 @@ package org.hyzhak.fluid.feathers
 		private var _hGroupBuilder:HGroupBuilder = new HGroupBuilder();
 		private var _vGroupBuilder:VGroupBuilder = new VGroupBuilder();
 		private var _sliderBuilder:FeatherSliderBuilder = new FeatherSliderBuilder();
+		private var _featherImageBuilder:FeatherImageBuilder = new FeatherImageBuilder();
 		
 		public function button():FeatherButtonBuilder
 		{
@@ -48,6 +51,9 @@ package org.hyzhak.fluid.feathers
 			return _sliderBuilder.initNewInstance();
 		}
 		
-		
+		public function image(texture : Texture) : FeatherImageBuilder
+		{
+			return _featherImageBuilder.initNewInstance(texture);
+		}
 	}
 }

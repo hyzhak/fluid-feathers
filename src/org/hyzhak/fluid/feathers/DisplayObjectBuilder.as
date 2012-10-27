@@ -3,6 +3,7 @@ package org.hyzhak.fluid.feathers
 	import starling.display.DisplayObject;
 	import starling.display.DisplayObjectContainer;
 	import starling.events.Event;
+	import starling.events.TouchEvent;
 
 	public class DisplayObjectBuilder
 	{
@@ -40,6 +41,12 @@ package org.hyzhak.fluid.feathers
 		final public function onTriggered(handler : Function) : DisplayObjectBuilder
 		{
 			_instance.addEventListener(Event.TRIGGERED, handler);
+			return this;
+		}
+		
+		final public function onTouch(handler : Function) : DisplayObjectBuilder
+		{
+			_instance.addEventListener(TouchEvent.TOUCH, handler);
 			return this;
 		}
 		

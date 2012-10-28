@@ -22,7 +22,7 @@ package org.hyzhak.fluid.feathers.binding
 			{
 				(value as BindProperty).bindTo(target, targetPropertyName);
 			}
-			else if(value is String)
+			else
 			{
 				target[targetPropertyName] = value;				
 			}

@@ -1,5 +1,7 @@
 package org.hyzhak.fluid.feathers
 {
+	import org.hyzhak.fluid.feathers.binding.BindManager;
+	
 	import starling.display.DisplayObject;
 	import starling.display.DisplayObjectContainer;
 	import starling.events.Event;
@@ -14,27 +16,33 @@ package org.hyzhak.fluid.feathers
 			_instance = value;
 		}
 		
-		final public function x(value : Number) : DisplayObjectBuilder
+		final public function x(value : Object) : DisplayObjectBuilder
 		{
-			_instance.x = value;
+			BindManager.setProperty(_instance, "x", value);
 			return this;
 		}
 		
-		final public function y(value : Number) : DisplayObjectBuilder
+		final public function y(value : Object) : DisplayObjectBuilder
 		{
-			_instance.y = value;
+			BindManager.setProperty(_instance, "y", value);
 			return this;
 		}
 		
-		final public function width(value : Number) : DisplayObjectBuilder
+		final public function width(value : Object) : DisplayObjectBuilder
 		{
-			_instance.width = value;
+			BindManager.setProperty(_instance, "width", value);
 			return this;
 		}
 		
-		final public function height(value : Number) : DisplayObjectBuilder
+		final public function height(value : Object) : DisplayObjectBuilder
 		{
-			_instance.height = value;
+			BindManager.setProperty(_instance, "height", value);			
+			return this;
+		}
+		
+		final public function rotation(value : Object) : DisplayObjectBuilder
+		{
+			BindManager.setProperty(_instance, "rotation", value);
 			return this;
 		}
 		

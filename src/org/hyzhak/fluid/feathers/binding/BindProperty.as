@@ -37,8 +37,13 @@ package org.hyzhak.fluid.feathers.binding
 			refreshValue();
 		}
 		
-		private function onChangeStarling(event : starling.events.Event):void
+		private function onChangeStarling(event : starling.events.Event, propertyName : String):void
 		{
+			if(_senderPropertyName != propertyName)
+			{
+				return;
+			}
+			
 			refreshValue();
 		}
 		

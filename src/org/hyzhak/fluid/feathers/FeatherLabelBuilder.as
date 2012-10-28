@@ -2,7 +2,7 @@ package org.hyzhak.fluid.feathers
 {
 	import feathers.controls.Label;
 	
-	import org.hyzhak.fluid.feathers.binding.BindProperty;
+	import org.hyzhak.fluid.feathers.binding.BindManager;
 
 	public class FeatherLabelBuilder extends DisplayObjectBuilder
 	{
@@ -14,14 +14,8 @@ package org.hyzhak.fluid.feathers
 		
 		public function text(value : Object) : FeatherLabelBuilder
 		{
-			if(value is BindProperty)
-			{
-				(value as BindProperty).bindTo(_instance, "text");
-			}
-			else if(value is String)
-			{
-				(_instance as Label).text = value as String;				
-			}
+			BindManager.setProperty(_instance, "text", value);
+			
 			return this;
 		}
 	}
